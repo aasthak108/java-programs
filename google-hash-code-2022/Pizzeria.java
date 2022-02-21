@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.*;
 class Pizzeria
 {
 	public static void main(String args[])
@@ -6,18 +7,12 @@ class Pizzeria
 		// Pizza Selection Program
 		int i=0;
 		int j;
-		String[] arrayL = new String[5];
+		String[] array = new String[10];
 		System.out.println("Enter Like ingridients");
 		Scanner s = new Scanner(System.in);
-		arrayL[i] = s.nextLine();
-		//System.out.println(arrayL[i]);
-		System.out.println("Enter Like ingridients");
-		Scanner s1 = new Scanner(System.in);
-		for(j=arrayL.length;j<arrayL.length+2;j++)
-		{
-		arrayL[j] = s1.nextLine();
-		System.out.println(arrayL[j]);
-		}
+		array[i] = s.nextLine();
+		for(String likeArray : array.split(" "));	
+		System.out.println(likeArray);
 	}
 		
 }
