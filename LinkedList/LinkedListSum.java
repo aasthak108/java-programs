@@ -50,8 +50,8 @@ public class LinkedListSum
 	}
 	public static void main(String args[])
 	{
-		LinkedList LinkedList1 = new LinkedList();
-		LinkedList LinkedList2 = new LinkedList();
+		LinkedListSum LinkedList1 = new LinkedListSum();
+		LinkedListSum LinkedList2 = new LinkedListSum();
 		LinkedList1.add(1);
 		LinkedList1.add(1);
 		LinkedList2.add(1);
