@@ -14,6 +14,7 @@ class MyStack
 	{
 		if( top == capacity -1)
 		{
+			
 			System.out.println("Stack is full");
 		}
 		top++;
