@@ -23,7 +23,7 @@ class RemoveDuplicate
 	}
 		while(curr!= null)
 		{
-			if(curr.data == curr.next.data)
+			if(curr.next!=null && curr.data == curr.next.data)
 			{
 				curr.next= curr.next.next;
 			}
