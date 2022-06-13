@@ -1,5 +1,5 @@
 class QuickSort{
-public int[] quickSorting(int arr[],int h,int l)
+public int[] quickSort(int arr[],int h,int l)
 {
 	int i=l-1;
 	for(int j=0;j<arr.length;j++)
@@ -22,7 +22,8 @@ public static void main(String args[])
 	int arr[]={10,80,30,90,40,50,70};
 	int h= arr.length-1;
 	int l= 0;
-	int SortedArr[]=new QuickSort().quickSorting(arr,h,l);
+	//pivot = 70
+	int SortedArr[]=new QuickSort().quickSort(arr,h,l);
 	for(int j=0;j<arr.length;j++)
 	{
 		System.out.println(SortedArr[j] + " is the required array");
