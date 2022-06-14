@@ -35,14 +35,7 @@ class HeightBinaryTree
 		tree.root.right = new Node(3);
 		tree.root.left.left = new Node(4);
 		tree.root.right.right = new Node(5);
-		System.out.println("The height orf tree is " + height(tree.root));
-		for(int i =0;i<height(tree.root);i++)
-		{
-			if(tree.root.left!=null)
-			{
-				System.out.println(""+ tree.root.left.key);
-			}
-		}
+		System.out.println("The height of the tree is " + height(tree.root));
 	}
 }
 		
