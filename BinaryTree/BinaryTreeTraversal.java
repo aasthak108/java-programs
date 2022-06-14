@@ -12,7 +12,7 @@ class Node
 }
 class BinaryTree
 {
-	Node root;
+	 static Node root;
 	BinaryTree()
 	{
 		root = null;
@@ -47,10 +47,6 @@ class BinaryTree
 		preorder(node.right);
 		System.out.println(node.key +"");
 	}
-	void postorder() {     postorder(root); }
-    void inorder() {     inorder(root); }
-    void preorder() {     preorder(root); }
-
 
 	public static void main(String[] args)
 	{
@@ -61,11 +57,11 @@ class BinaryTree
 		tree.root.left.left = new Node(4);
 		tree.root.right.right = new Node(5);
 		System.out.println("Preorder Traversal is");
-		tree.preorder();
+		tree.preorder(root);
 		System.out.println("inorder Traversal is");
-		tree.inorder();
+		tree.inorder(root);
 		System.out.println("postorder Traversal is");
-		tree.postorder();
+		tree.postorder(root);
 		
 	}
 }
