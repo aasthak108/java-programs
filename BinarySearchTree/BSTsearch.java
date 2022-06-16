@@ -42,7 +42,7 @@ class BSTsearch
 		tree.root.left = new Node(90);
 		tree.root.right = new Node(1);
 		int data = 1;
-		if(bstSearch(root,1) != null)
+		if(tree.bstSearch(root,1) != null)
 		{
 			System.out.println("Node Found");
 		}
