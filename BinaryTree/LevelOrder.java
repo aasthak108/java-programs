@@ -38,7 +38,6 @@ public static void main(String[] args)
 		tree_level.root.left = new Node(2);
 		tree_level.root.right = new Node(3);
 		tree_level.root.left.left = new Node(4);
-		tree_level.root.right.right = new Node(5);
 		System.out.println("The level order traversal is");
 		tree_level.levelOrder();
 	}
