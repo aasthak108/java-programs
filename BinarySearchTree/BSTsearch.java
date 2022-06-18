@@ -8,13 +8,31 @@ class Node
 		left=right=null;
 	}
 }
-class BSTsearch
+class Tree
 {
 	static Node root;
-	BSTsearch()
+	root=null;
+	public static void main(String args[])
 	{
-		root = null;
+		Tree tree = new Tree();
+		tree.root = new Node(10);
+		tree.root.left = new Node(90);
+		tree.root.left.left=new Node(2);
+		tree.root.right = new Node(1);
+		int data = 1;
+		Node search = new Tree().bstSearch(root,data);
+		if(tree.search(root,1)!= null)
+		{
+			System.out.println("Node Found");
+		}
+		else
+		{
+			System.out.println("Node not found");
+		}
 	}
+}
+class BSTsearch
+{
 	public static Node bstSearch(Node root,int data)
 	{
 		if(root==null)
@@ -23,7 +41,7 @@ class BSTsearch
 		}
 		if(root.data == data)
 		{ 
-			return root;
+			return tree;
 		}
 		if(data<root.data)
 		{
@@ -35,27 +53,7 @@ class BSTsearch
 		}
 		return root;
 	}
-	public static void main(String args[])
-	{
-		BSTsearch tree = new BSTsearch();
-		tree.root = new Node(10);
-		tree.root.left = new Node(90);
-		tree.root.right = new Node(1);
-		int data = 1;
-		if(tree.bstSearch(root,1) != null)
-		{
-			System.out.println("Node Found");
-		}
-		else
-		{
-			System.out.println("Node not found");
-		}
-			
-	}
-}
+
 			
 		
 		
-		
-		
-			
