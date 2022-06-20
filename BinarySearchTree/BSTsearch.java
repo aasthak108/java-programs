@@ -10,21 +10,21 @@ class Node
 }
 class Tree
 {
-	static Node root;
+	Node root;
 	Tree()
 	{
 		root=null;
 	}
-	BSTsearch search = new BSTsearch();
 	public static void main(String args[])
 	{
+		BSTsearch search = new BSTsearch();
 		Tree tree = new Tree();
 		tree.root = new Node(10);
-		tree.root.left = new Node(90);
+		tree.root.left = new Node(9);
 		tree.root.left.left=new Node(2);
-		tree.root.right = new Node(1);
+		tree.root.right = new Node(90);
 		int data = 1;
-		if(tree.search.bstSearch(root,data)!= null)
+		if(search.bstSearch(tree.root,data)!= null)
 		{
 			System.out.println("Node Found");
 		}
@@ -36,7 +36,6 @@ class Tree
 }
 class BSTsearch
 {
-	Tree root = new Tree();
 	public Node bstSearch(Node root,int data)
 	{
 		if(root==null)
