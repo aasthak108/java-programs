@@ -1,6 +1,6 @@
 class MergeSort
 {
-	public static void merge(int arr[],int m,int l,int u)
+	public static void merge(int arr[],int l,int m,int u)
 	{
 		int j,k,i;
 		int n1=m-l+1;
@@ -16,7 +16,7 @@ class MergeSort
 			
 			rightArray[j] = arr[m+1+j];
 		}
-		k=0;
+		k=l;
 		i=0;
 		j=0;
 		while(i<n1 && j<n2)
@@ -37,7 +37,7 @@ class MergeSort
 		{
 			arr[k] = leftArray[i];
 			i++;
-			i++;
+			k++;
 		}
 		while(j<n2)
 		{
