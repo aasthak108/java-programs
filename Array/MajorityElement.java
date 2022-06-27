@@ -1,10 +1,10 @@
- 
+
 class MajorityElement
 {
 static int majorityElement(int a[], int size,int i, int j)
     {
-        int c=0;
 		int count;
+		int n = a.length;
         for(i=0;i<size;i++)
         {
 			count=0;
@@ -15,15 +15,10 @@ static int majorityElement(int a[], int size,int i, int j)
 					count++;
 				}
 			}
-		if(count>c)
+		if(count>n/2)
             {
-				count = c;
-				int index = i;
+				return a[i];
             }
-		}
-		if(count>size/2)
-		{
-			 System.out.println(""+a[i]);
 		}
 		return -1;
 	}

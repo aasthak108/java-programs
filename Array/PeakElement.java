@@ -35,7 +35,7 @@ class PeakElement
 	
 	public static void main(String args[])
 	{
-		int arr[]={40,20,15,2,23,90,67};
+		int arr[]={40,20,15,2,23,90,95};
 		int reqArr[]=new PeakElement().getPeakElement(arr);
 		for(int i=0;i<arr.length;i++)
 		{
