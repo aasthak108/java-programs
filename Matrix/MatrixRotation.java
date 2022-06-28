@@ -16,7 +16,7 @@ class MatrixRotation
 		{
 			for(j=0;j<n;j++)
 			{
-				mat[i][j] = temp[n-i-1][j];
+				mat[i][j] = temp[j][n-i-1];
 			}
 		}
 		return mat;
@@ -35,8 +35,9 @@ class MatrixRotation
 			for(j=0;j<n;j++)
 			{
 				System.out.print(matrix_rotation[i][j] + " ");
-				System.out.println("\n");
+
 			}
+			System.out.println("\n");
 		}
 	}
 }
