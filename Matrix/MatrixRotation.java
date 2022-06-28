@@ -35,7 +35,7 @@ class MatrixRotation
 			for(j=0;j<n;j++)
 			{
 				System.out.print(matrix_rotation[i][j] + " ");
-				System.out.print("\n");
+				System.out.println("\n");
 			}
 		}
 	}
