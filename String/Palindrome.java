@@ -1,10 +1,10 @@
 class Palindrome
 {
-	public int checkPalindrome(char str, int e, int s)
+	public int checkPalindrome(String str, int e, int s)
 	{
-			if((strcharAt(s)) != (strcharAt(e)))
+			if((str.charAt(s)) != (str.charAt(e)))
 			return -1;
-			if((strcharAt(s)) == (strcharAt(e)))
+			if((str.charAt(s)) == (str.charAt(e)))
 			return 1;
 			if(s<e)
 			return checkPalindrome(str,s+1,e-1);
@@ -12,10 +12,11 @@ class Palindrome
 	}
 	public static void main(String args[])
 	{
-		char str = "aabaa";
-		int e = str.length;
+		String str = "aabaa";
+		int e = str.length()-1;
 		int s = 0;
 		int result = new Palindrome().checkPalindrome(str,e,s);
+		
 		System.out.println(result + " ");
 	}
 }
