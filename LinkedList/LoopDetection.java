@@ -2,72 +2,49 @@ class Node
 {
 	int data;
 	Node next;
-	public int getData()
+	Node(int x)
 	{
-		return data;
-	}
-	public void setData(int data)
-	{
-		this.data=data;
-	}
-	public Node getNext()
-	{
-		return next;
-	}
-	public void setNext(Node next)
-	{
-		this.next = next;
+		data = x;
+		next = null;
 	}
 }
-public class LoopDetection
+class LoopDetection
 {
-	Node head;
-	Node tail;
-	public LoopDetection()
+	static Node head;
+	LoopDetection()
 	{
 		head = null;
-		tail = null;
 	}
-	public void add(int data)
+	public static int loopDetection(Node head)
 	{
-		if(data >=0)
+		Node s = head;
+		Node f = head;
+		int res=0;
+		while(s!= null && f!= null &&f.next!= null)
 		{
-			Node current = new Node();
-			current.setData(data);
-			current.setNext(null);
-			if(head == null)
+			s = s.next;
+			f = f.next.next;
+			if(s==f)
 			{
-				head=current;
-				tail=current;
+				res =1;
 			}
-			else
+			if(res == 1)
 			{
-				tail.setNext(current);
-				tail=current;
+				return 1;
 			}
 		}
+		return 0;
 	}
-public static void main(String args[])
- {
-	int count=0;
-	int x=1;
-	LinkedList givenLinkedList = new LinkedList();
-	givenLinkedList.add(1);
-	givenLinkedList.add(2);
-	givenLinkedList.add(3);
-	givenLinkedList.add(4);
-	Node curr = givenLinkedList.head;
-	while(curr != null)
+	public static void main(String args[])
 	{
-		count++;
-		curr = curr.next;
+		LoopDetection list = new LoopDetection();
+		list.head= new Node(1);
+		list.head.next=new Node(2);
+		list.head.next.next=new Node(3);
+		list.head.next.next.next=list.head;;
+		System.out.println(""+loopDetection(head));
 	}
-	System.out.println("Number of nodes are "+ count);
-		while(count == 2)
-		{
-			count+count= 3;
-			System.out.println("True");
-		}		
 }
-}
+			
+			
 		
