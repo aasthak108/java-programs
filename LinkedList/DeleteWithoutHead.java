@@ -14,6 +14,7 @@ class Node
 class DeleteWithoutHead
 {
    static Node head;
+   
   public void deleteWitoutHead(Node node)
   {
     Node temp = node.next;
