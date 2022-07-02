@@ -1,5 +1,5 @@
 import java.util.Stack;
-class InfixTOPostfix
+class InfixToPostfix
 {
 	public static void main(String args[]) 
     {
@@ -48,9 +48,6 @@ class InfixTOPostfix
                     result += x;
                     x = stack.pop();
                 }
-            }else if(c=='(')
-			{
-                stack.push(c);
             }
 			else
 			{

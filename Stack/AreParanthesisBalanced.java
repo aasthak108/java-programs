@@ -1,7 +1,7 @@
 import java.util.Stack;
 class AreParanthesisBalanced
 {
-	public static int arePranthesisBalanced(String str)
+	public static arePranthesisBalanced(String str)
 	{
 		int i;
 		Stack <Character> s = new Stack<>();
