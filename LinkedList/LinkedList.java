@@ -81,8 +81,6 @@ public static void main(String args[])
 	}
 public static Node getMiddleNode(LinkedList givenLinkedList)
 {
-	
-	
 	int midLength;
 	Node midNode = givenLinkedList.head;
 	int length = getCount(givenLinkedList);
