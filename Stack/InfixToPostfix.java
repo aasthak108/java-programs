@@ -52,7 +52,8 @@ class InfixToPostfix
 			else
 			{
 				
-                while (!stack.isEmpty() && priority(c) <= priority(stack.peek()))
+                w
+				hile (!stack.isEmpty() && priority(c) <= priority(stack.peek()))
                     result += stack.pop();
 					stack.push(c);
 			}
