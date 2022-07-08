@@ -23,8 +23,8 @@ class AnagramCheck
 	}
 	public static void main(String args[])
 	{
-		String str1= "silent";
-		String str2= "listen";
+		String str1= "aba";
+		String str2= "baa";
 		int CheckingForAnagram = new AnagramCheck().anagramTest(str1,str2);
 		if(CheckingForAnagram==1)
 		{
