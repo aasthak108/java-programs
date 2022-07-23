@@ -1,34 +1,42 @@
-
 class MajorityElement
 {
-static int majorityElement(int a[], int size,int i, int j)
+static void majorityElement(int a[],int i, int j)
     {
-		int count;
+		int maxcount=0;
+		int index = 0;
 		int n = a.length;
-        for(i=0;i<size;i++)
+        for(i=0;i<n;i++)
         {
-			count=0;
-            for( j=1;j<size;j++)
+			int count=0;
+            for( j=1;j<n;j++)
             {
 				if(a[i]==a[j])
 				{
 					count++;
 				}
 			}
-		if(count>n/2)
+		if(count>maxcount)
             {
-				return a[i];
+				maxcount = count;
+				index = i;
             }
 		}
-		return -1;
+		if(maxcount>n/2)
+		{
+			System.out.println(" element is "+a[index]);
+		}
+		else
+		{
+			System.out.println("not found");
+		}
 	}
 
 		public static void main(String args[])
 		{
-			int a[] ={6,1,15,19,9,13,12,6,7,2,10,4,1,14,11,14,14,13};
-			int size = a.length;
+			int a[] ={1,1,1,2,2,2,2,2};
 			int i=0;
 			int j=0;
-			majorityElement(a,size,i,j);
+			majorityElement(a,i,j);
 		}
 	}
+	
