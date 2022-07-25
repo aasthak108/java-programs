@@ -26,6 +26,19 @@ class LinkedList1
 			tail = curr;
 		}
 	}
+	void insertAtBegin(int data)
+	{
+		Node curr = new Node(data);
+		if(head==null)
+		{
+			head = curr;
+		}
+		else
+		{
+			curr.next = head;
+			head = curr;
+		}
+	}
 	void printlist()
 	{
 		Node curr = head;
@@ -48,6 +61,8 @@ class LinkedList1
 		list.add(4);
 		list.add(5);
 		list.add(6);
+		list.printlist();
+		list.insertAtBegin(8);
 		list.printlist();
 	}
 }
