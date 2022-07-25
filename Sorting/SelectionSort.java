@@ -1,3 +1,4 @@
+
 class SelectionSort
 {
 	public int[] selectionSort(int arr[])
@@ -14,9 +15,12 @@ class SelectionSort
 					min = j;
 				}
 			}
+			if(min!=i)
+			{
 			int temp = arr[min];
 			arr[min] = arr[i];
 			arr[i] = temp;
+			}
 		}
 		return arr;
 	}
