@@ -45,7 +45,7 @@ static class Graph
 }
 	public static void main(String args[])
 	{
-		int v=5,e =4;
+		int v=4,e =3;
 		Graph g = new Graph(v,e);
 		g.addEdge(0,1);
 		g.addEdge(0,2);
