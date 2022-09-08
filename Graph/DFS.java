@@ -39,6 +39,6 @@ static class GraphDFS
 		g.addEdge(0,2);
 		g.addEdge(1,3);
 		boolean[] visited = new boolean[v];
-		g.dfs(0,visited);
+		g.dfs(3,visited);
 	}
 }
