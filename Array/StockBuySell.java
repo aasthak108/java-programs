@@ -15,7 +15,7 @@ class StockBuySell
 	}
 	public static void main(String args[])
 	{
-		int arr[]={100,180,260,310,40,535,695};
+		int arr[]={1,2,100};
 		int n = arr.length;
 		System.out.println(""+profit(arr,n));
 	}
