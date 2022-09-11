@@ -1,4 +1,4 @@
-class RotateArray
+class RotateArray01
 {
 	static int[] rotateArray(int arr[],int k)
 	{
@@ -30,7 +30,7 @@ class RotateArray
 	{
 		int arr[] = {1,2,3,4,5,6};
 		int k=3;
-		int array[] = new RotateArray().rotateArray(arr,k);
+		int array[] = new RotateArray01().rotateArray(arr,k);
 		for(int i=0;i<array.length;i++)
 		{
 			System.out.println("The rotated array is" + array[i]);

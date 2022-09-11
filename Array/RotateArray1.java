@@ -1,4 +1,4 @@
-class RotateArray1
+class RotateArray
 {
 	static int[] rotateArray(int arr[],int k)
 	{
