@@ -1,27 +1,27 @@
-
-class ReverseArray
+class ReverseArray2
 {
-	public static int[] reverseArray(int arr[],int start,int end)
+	int[] reverse(int arr[],int s,int e)
 	{
-		if(start>=end)
+		if(s<e)
 		{
-			return arr;
+			int temp;
+			temp=arr[e];
+			arr[e]=arr[s];
+			arr[s]=temp;
+			return reverse(arr,s+1,e-1);
 		}
-	int temp;
-	temp = arr[start];
-	arr[start]= arr[end];
-	arr[end] = temp;
-	return reverseArray(arr,start+1,end-1);
+	return arr;
 	}
 	public static void main(String args[])
+	
 	{
 		int arr[] = {1,2,3,4,5};
-		int end =arr.length-1;
-		int start = 0;
-		int array[] = new ReverseArray().reverseArray(arr,0,arr.length-1);
+		int s=0;
+		int e=arr.length-1;
+		int[] array=new ReverseArray2().reverse(arr,s,e);
 		for(int i=0;i<arr.length;i++)
 		{
-			System.out.println("Reversed Array is"+ array[i]);
+			System.out.println(""+array[i]);
 		}
 	}
 }
