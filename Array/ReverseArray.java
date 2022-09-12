@@ -1,8 +1,8 @@
-class ReverseArray2
+class ReverseArray
 {
 	int[] reverse(int arr[],int s,int e)
 	{
-		if(s<e)
+		if(s<=e)
 		{
 			int temp;
 			temp=arr[e];
@@ -18,7 +18,7 @@ class ReverseArray2
 		int arr[] = {1,2,3,4,5};
 		int s=0;
 		int e=arr.length-1;
-		int[] array=new ReverseArray2().reverse(arr,s,e);
+		int[] array=new ReverseArray().reverse(arr,s,e);
 		for(int i=0;i<arr.length;i++)
 		{
 			System.out.println(""+array[i]);
