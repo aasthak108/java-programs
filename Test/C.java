@@ -9,7 +9,7 @@ class B extends A
 {
 	void display()
 	{
-		System.out.println("Class B");
+		System.out.println("Class B Modified");
 	}
 }
 class C
