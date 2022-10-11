@@ -1,3 +1,4 @@
+/*
 import java.util.scanner;
 class ascii
 {
@@ -10,4 +11,4 @@ class ascii
  System.out.println("ASCII Value of c"+ASCII_value);
 }
  
- 
+ */
