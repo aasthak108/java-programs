@@ -1,53 +1,58 @@
 import java.util.*;
-class Node
-{
-	int data;
-	Node next;
-	public Node(int item)
-	{
-		data= item;
-		next = null;
-	}
-}
+import java.io.*;
+import java.lang.*;
 class Revise
 {
-	static Node head;
-	public static Node insert(int data)
+	int arr[];
+	int f;
+	int r;
+	int size;
+	Revise(int s)
 	{
-		Node temp= new Node(data);
-		if(head == null)
-		{
-			head = temp;
-		}
-		else
-		{
-		head.next = temp;
-		temp.next = null;
-		}
-		return head;
+		size = s;
+		arr = new int[size];
+		f=0;
+		r=0;
 	}
-	public static void print()
+	void enque(int x)
 	{
-		Node curr = null;
-		if(head == null)
+		if(r == size)
 		{
-			return;
+			System.out.println("Queue is full");
 		}
-		head = curr;
-		while(curr!=null)
+		arr[r] = x;
+		r = r+1;
+	}
+	int deque()
+	{
+		if(f==0 && r==0)
 		{
-			System.out.println(""+ curr.data);
-			curr = curr.next;
+			System.out.println("Queue is empty");
+		}
+		int element = arr[f];
+		f = f+1;
+		return element;
+	}
+	void display()
+	{
+		if(f==0 && r==0)
+		{
+			System.out.println("Queue is empty");
+		}
+		for(int i =f;i<r;i++)
+		{
+			System.out.println(" " + arr[i]);
 		}
 	}
 	public static void main(String args[])
 	{
-		Revise l = new Revise();
-		l.insert(1);
-		l.insert(2);
-		l.print();
-		
+		Revise q = new Revise();
+		q.enque(1);
+		q.enque(4);
+		q.enque(6);
+		q.enque(9);
+		System.out.println("Dequeued element is " + q.deque());
+		q.display();
 	}
 }
-		
 	
