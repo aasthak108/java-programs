@@ -2,7 +2,7 @@ class MajorityElement
 {
 static void majorityElement(int a[],int i, int j)
     {
-		int maxcount=0;
+		int maxCount=0;
 		int index = 0;
 		int n = a.length;
         for(i=0;i<n;i++)
@@ -15,13 +15,13 @@ static void majorityElement(int a[],int i, int j)
 					count++;
 				}
 			}
-		if(count>maxcount)
+		if(count>maxCount)
             {
-				maxcount = count;
+				maxCount = count;
 				index = i;
             }
 		}
-		if(maxcount>n/2)
+		if(maxCount>n/2)
 		{
 			System.out.println(" element is "+a[index]);
 		}
